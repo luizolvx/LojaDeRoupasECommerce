@@ -1,20 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Loja de Roupas</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Roupas E-Commerce</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+          crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <style>
+        .product-card {
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
 </head>
 <body>
-    <h1>Bem-vindo à Loja de Roupas!</h1>
-    <p>O servidor Tomcat está funcionando corretamente.</p>
-</body>
-</html>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="../img/logo.png" alt="logo MedAssit" style="width: 50px; height: auto">
+      <span class="ms-2 fw-bold text-primary">French rose</span>
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -24,27 +39,108 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#sobre">Masculino</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            Feminino
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#servicos">Agendamento Online</a></li>
+            <li><a class="dropdown-item" href="#servicos">Especialidades</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#servicos">Exames e Procedimentos</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          <a class="nav-link" href="#hospitais">Ofertas</a>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      <div class="d-flex">
+        <a href="index.php?page=login" class="btn btn-outline-primary me-2">Login</a>
+        <a href="../view/usuario-create.php" class="btn btn-primary">Carrinho</a>
+      </div>
     </div>
   </div>
 </nav>
+
+    <div class="container mt-5">
+
+        <div class="p-5 mb-4 bg-light rounded-3 shadow-sm">
+            <div class="container-fluid py-5 text-center">
+                <h1 class="display-5 fw-bold">🔥 50% OFF na Coleção Primavera!</h1>
+                <p class="fs-4">Novos modelos de camisetas e vestidos com preços imperdíveis.</p>
+                <a href="#" class="btn btn-primary btn-lg mt-3">Ver Ofertas</a>
+            </div>
+        </div>
+
+        <h2 class="mb-4 text-center">Novidades em Destaque</h2>
+
+        <div class="row row-cols-1 row-cols-md-4 g-4 mb-5">
+            
+            <div class="col">
+                <div class="card product-card h-100">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Camiseta" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Produto Java</text></svg>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Camiseta Básica Java</h5>
+                        <p class="card-text text-muted">Cor: Preta, Tamanhos: P, M, G</p>
+                        <p class="fs-4 fw-bold text-success">R$ 59,90</p>
+                        <a href="#" class="btn btn-sm btn-dark">Detalhes</a>
+                        <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-plus"></i> Carrinho</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card product-card h-100">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Vestido" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Produto Servlet</text></svg>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Vestido Verão</h5>
+                        <p class="card-text text-muted">Cor: Vermelha, Tamanhos: P, M</p>
+                        <p class="fs-4 fw-bold text-success">R$ 129,90</p>
+                        <a href="#" class="btn btn-sm btn-dark">Detalhes</a>
+                        <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-plus"></i> Carrinho</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card product-card h-100">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Calça" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Produto JSP</text></svg>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Calça Jeans Slim</h5>
+                        <p class="card-text text-muted">Cor: Azul, Tamanhos: 38 ao 44</p>
+                        <p class="fs-4 fw-bold text-success">R$ 199,90</p>
+                        <a href="#" class="btn btn-sm btn-dark">Detalhes</a>
+                        <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-plus"></i> Carrinho</a>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col">
+                <div class="card product-card h-100">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Blusa" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Produto MySQL</text></svg>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Blusa de Lã</h5>
+                        <p class="card-text text-muted">Cor: Cinza, Tamanhos: P, G</p>
+                        <p class="fs-4 fw-bold text-success">R$ 99,90</p>
+                        <a href="#" class="btn btn-sm btn-dark">Detalhes</a>
+                        <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-plus"></i> Carrinho</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white mt-5 p-4 text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Loja de Roupas E-Commerce</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+            crossorigin="anonymous"></script>
+</body>
+</html>
